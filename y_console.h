@@ -1,3 +1,4 @@
+/*encoding:GB2312*/
 #ifndef __Y_CONSOLE_H__
 #define __Y_CONSOLE_H__
 
@@ -7,7 +8,7 @@ extern "C"{
 #include "y_hashtable.h"
 #include "y_string_prasing.h"
 
-//#define USING_STDOUT //ä½¿ç”¨æ ‡å‡†è¾“å‡º
+//#define USING_STDOUT //Ê¹ÓÃ±ê×¼Êä³ö
 
 typedef enum 
 {
@@ -31,14 +32,14 @@ typedef struct Y_CONSOLE
 }Y_CONSOLE;
 
 
-Y_CONSOLE* y_console_init(int len);//æ§åˆ¶å°åˆå§‹åŒ–
-Y_COMMAND* y_command_create(const char* name, const char* des, const char* help, int (*func)(int argc, char** argv));//åˆ›å»ºå‘½ä»¤
-Y_ERR_T y_command_register(Y_CONSOLE* console, Y_COMMAND* cmd);//å‘½ä»¤æ³¨å†Œ
-int y_cmd_call(Y_CONSOLE* console, const char* name, int argc, char** argv);//æ‰§è¡Œå‘½ä»¤
-
+Y_CONSOLE* y_console_init(int len);//¿ØÖÆÌ¨³õÊ¼»¯
+Y_COMMAND* y_command_create(const char* name, const char* des, const char* help, int (*func)(int argc, char** argv));//´´½¨ÃüÁî
+Y_ERR_T y_command_register(Y_CONSOLE* console, Y_COMMAND* cmd);//ÃüÁî×¢²á
+int y_cmd_call(Y_CONSOLE* console, const char* name, int argc, char** argv);//Ö´ĞĞÃüÁî
 int y_run_from_string(Y_CONSOLE* console, char* str);
+Y_ERR_T y_console_deinit(Y_CONSOLE* console);//¿ØÖÆÌ¨Çå³ı
 
-Y_ERR_T y_console_deinit(Y_CONSOLE* console);//æ§åˆ¶å°æ¸…é™¤
+
 #ifdef __cplusplus
 }
 #endif

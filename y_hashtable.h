@@ -1,3 +1,4 @@
+/*encoding:GB2312*/
 #ifndef __Y_HASHTABLE_H__
 #define __Y_HASHTABLE_H__
 
@@ -7,7 +8,7 @@ extern "C"{
 
 typedef struct Y_Node
 {
-    const char* key;//ä¸‡èƒ½æŒ‡é’ˆ
+    const char* key;//ÍòÄÜÖ¸Õë
     void* obj;
     struct Y_Node* Next_t;
 }Y_Node;
@@ -25,13 +26,14 @@ typedef enum Y_Hash_Err
     Y_Hash_Null=-1
 }Y_Hash_Err;
 
-Y_HashTable* y_HT_create_hashtable(int size);//åˆ›å»ºå“ˆå¸Œè¡¨
-Y_Node* y_HT_create_Node(Y_Node* head, const char* key, void* obj);//åˆ›å»ºèŠ‚ç‚¹
-int y_HT_str2hash(const char* str);//å­—ç¬¦ä¸²è½¬å“ˆå¸Œå€¼
-Y_Hash_Err y_HT_insert(Y_HashTable *hastable, const char* key, void* obj);//æ’å…¥æ•°æ®
-void* y_HT_search_by_key(Y_HashTable *hashtable, const char* key);//é€šè¿‡å­—ç¬¦ä¸²æŸ¥æ‰¾æ•°æ®
-//Y_Hash_Err y_HT_del_node(Y_Node* node);//åˆ é™¤èŠ‚ç‚¹
-Y_Hash_Err y_HT_del_hashtable(Y_HashTable* hashtable);//åˆ é™¤å“ˆå¸Œè¡¨
+Y_HashTable* y_HT_create_hashtable(int size);//´´½¨¹şÏ£±í
+Y_Node* y_HT_create_Node(Y_Node* head, const char* key, void* obj);//´´½¨½Úµã
+int y_HT_str2hash(const char* str);//×Ö·û´®×ª¹şÏ£Öµ
+Y_Hash_Err y_HT_insert(Y_HashTable *hastable, const char* key, void* obj);//²åÈëÊı¾İ
+void* y_HT_search_by_key(Y_HashTable *hashtable, const char* key);//Í¨¹ı×Ö·û´®²éÕÒÊı¾İ
+//Y_Hash_Err y_HT_del_node(Y_Node* node);//É¾³ı½Úµã
+Y_Hash_Err y_HT_del_hashtable(Y_HashTable* hashtable);//É¾³ı¹şÏ£±í
+
 
 #ifdef __cplusplus
 }

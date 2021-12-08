@@ -1,3 +1,4 @@
+/*encoding:GB2312*/
 #include "y_hashtable.h"
 
 #include <stdlib.h>

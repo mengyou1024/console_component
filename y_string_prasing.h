@@ -1,3 +1,4 @@
+/*encoding:GB2312*/
 #ifndef __Y_STRING_PRASING_H__
 #define __Y_STRING_PRASING_H__
 
@@ -6,17 +7,17 @@ extern "C"{
 #endif
 
 
-#define MAX_NUM_OF_ARGS     6       //æœ€å¤§çš„å‚æ•°æ•°é‡
-#define MAX_LEN_OF_ARGS     16       //å‚æ•°ä¸­å­—ç¬¦ä¸²æœ€å¤§çš„é•¿åº¦
-
+#define MAX_NUM_OF_ARGS     6       //×î´óµÄ²ÎÊýÊýÁ¿
+#define MAX_LEN_OF_ARGS     16       //²ÎÊýÖÐ×Ö·û´®×î´óµÄ³¤¶È
 typedef struct Y_STR_PRASED
 {
-    char string_t[MAX_NUM_OF_ARGS][MAX_LEN_OF_ARGS];
+    char *string_t[MAX_NUM_OF_ARGS];
     int num;
 }Y_STR_PRASED;
 
-Y_STR_PRASED* y_string_prase(char* str);//å°†å­—ç¬¦ä¸²ç±»åž‹è§£æžæˆY_STR_PRASEDç±»åž‹
-int y_string_del(Y_STR_PRASED* str_prased);//é”€æ¯Y_STR_PRASED
+Y_STR_PRASED* y_string_prase(char* str);//½«×Ö·û´®ÀàÐÍ½âÎö³ÉY_STR_PRASEDÀàÐÍ
+int y_string_del(Y_STR_PRASED* str_prased);//Ïú»ÙY_STR_PRASED
+
 
 #ifdef __cplusplus
 }
